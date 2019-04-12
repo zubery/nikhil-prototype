@@ -5,25 +5,33 @@ public class TouchMovement : MonoBehaviour
 {
 
     public Camera cam;
-    public NavMeshAgent agent; 
+    public NavMeshAgent agent;
+
+    private Ray touchRay;
+    private RaycastHit hit; 
+    private Vector3 distance3d;
+    private float distance; 
 
     // Update is called once per frame
     void Update()
     {
         for(int i = 0; i < Input.touchCount; i++)
         {
-            Debug.Log("touch"); 
 
-            Ray touchRay = cam.ScreenPointToRay(Input.touches[i].position);
-            RaycastHit hit; 
+            touchRay = cam.ScreenPointToRay(Input.touches[i].position); 
 
             if(Physics.Raycast(touchRay, out hit))
             {
-                agent.SetDestination(hit.point); 
+                distance3d = transform.position - hit.point;
+                distance = distance3d.magnitude; 
+
+                if(distance > 1)
+                {
+                    agent.SetDestination(hit.point);
+                }
+
             }
 
-            //Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-            //Debug.DrawLine(Vector3.zero, touchPosition, Color.red); 
         }
     }
 }
