@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 1
+        preset: 4
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
@@ -121,12 +121,12 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0.12
-        temperature: 6
-        tint: -2
-        hueShift: -8
-        saturation: 1.19
-        contrast: 1.15
+        postExposure: 0.32
+        temperature: 10.2
+        tint: 2.9
+        hueShift: -9
+        saturation: 1.253
+        contrast: 0.974
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 0.98231477, g: 1, b: 0.96462935, a: 0}
+          slope: {r: 0.9558659, g: 1, b: 0.8009094, a: 0}
           power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
