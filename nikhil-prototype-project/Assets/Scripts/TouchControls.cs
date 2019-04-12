@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI; 
 
-public class TouchMovement : MonoBehaviour
+public class TouchControls : MonoBehaviour
 {
 
     public Camera cam;
@@ -31,8 +31,8 @@ public class TouchMovement : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log(hit.transform.gameObject.layer);
-                    //Debug.Log(); 
+                    Debug.Log("1 " + hit.transform.gameObject.layer);
+                    Debug.Log("2 " + LayerMask.NameToLayer("Interactable")); 
                 }
                 //else if (hit.transform.gameObject.layer == LayerMask.GetMask("Interactive")) 
                 //{
