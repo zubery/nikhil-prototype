@@ -9,7 +9,6 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 offset;
 
-    // Start is called before the first frame update
     private void Start()
     {
         offset = transform.position - target.position; 

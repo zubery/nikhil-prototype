@@ -12,7 +12,6 @@ public class TouchControls : MonoBehaviour
     private Vector3 distance3d;
     private float distance; 
 
-    // Update is called once per frame
     void Update()
     {
         for(int i = 0; i < Input.touchCount; i++)
