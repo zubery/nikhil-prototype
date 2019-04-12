@@ -121,12 +121,12 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0.32
+        postExposure: 0.44
         temperature: 10.2
         tint: 2.9
         hueShift: -9
-        saturation: 1.253
-        contrast: 0.974
+        saturation: 1.25
+        contrast: 1.08
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
