@@ -23,12 +23,21 @@ public class TouchMovement : MonoBehaviour
             if(Physics.Raycast(touchRay, out hit))
             {
                 distance3d = transform.position - hit.point;
-                distance = distance3d.magnitude; 
+                distance = distance3d.magnitude;
 
-                if(distance > 1)
+                if (distance > 2)
                 {
                     agent.SetDestination(hit.point);
                 }
+                else
+                {
+                    Debug.Log(hit.transform.gameObject.layer);
+                    //Debug.Log(); 
+                }
+                //else if (hit.transform.gameObject.layer == LayerMask.GetMask("Interactive")) 
+                //{
+                //    Debug.Log("I've been hit"); 
+                //}
 
             }
 
