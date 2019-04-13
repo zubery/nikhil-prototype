@@ -19,7 +19,7 @@ public class FixMemory : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
-        lambda = 30.0f; 
+        lambda = 15.0f; 
     }
 
     public void Update()
@@ -71,14 +71,14 @@ public class FixMemory : MonoBehaviour
 
             float temp = ring1.transform.eulerAngles.y; 
 
-            if(AnglesEqual(ring1.transform.eulerAngles.y, ring2.transform.eulerAngles.y, ring3.transform.eulerAngles.y))
+            if(AnglesEqual(ring1.transform.eulerAngles.y, ring2.transform.eulerAngles.y, ring3.transform.eulerAngles.y) != -1)
             {
                 Debug.Log("FIXED!!"); 
             }
         }
     }
 
-    public bool AnglesEqual(float angle1, float angle2, float angle3)
+    public int AnglesEqual(float angle1, float angle2, float angle3)
     {
         float deltaOneTwo;
         float deltaOneThree;
@@ -105,11 +105,11 @@ public class FixMemory : MonoBehaviour
 
         if(deltaOneTwo < lambda && deltaOneThree < lambda && deltaTwoThree < lambda)
         {
-            return true; 
+            return (int)((deltaOneTwo + deltaOneThree + deltaTwoThree) / 3.0f); 
         }
         else
         {
-            return false;
+            return -1;
         }
     }
 }

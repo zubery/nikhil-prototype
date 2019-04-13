@@ -1944,6 +1944,8 @@ MonoBehaviour:
     - You insolent coward...
     - Foolish of you to think...
   memory: {fileID: 0}
+  isMemory: 0
+  isFixable: 0
 --- !u!114 &1468982903
 MonoBehaviour:
   m_ObjectHideFlags: 0
