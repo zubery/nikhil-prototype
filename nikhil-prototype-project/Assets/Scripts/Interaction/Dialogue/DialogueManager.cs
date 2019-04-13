@@ -31,7 +31,9 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence); 
         }
 
-        Debug.Log("Starting convo with: " + dialogue.interactableName); 
+        Debug.Log("Starting convo with: " + dialogue.interactableName);
+
+        DisplayNextSentence(); 
     }
 
     public void DisplayNextSentence()
@@ -42,7 +44,7 @@ public class DialogueManager : MonoBehaviour
             return; 
         }
 
-       string nextSentence = sentences.Dequeue();
+        string nextSentence = sentences.Dequeue();
         Debug.Log(nextSentence); 
     }
 
