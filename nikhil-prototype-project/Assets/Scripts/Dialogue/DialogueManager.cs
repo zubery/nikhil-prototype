@@ -30,6 +30,8 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence); 
         }
+
+        Debug.Log("Starting convo with: " + dialogue.interactableName); 
     }
 
     public void DisplayNextSentence()
@@ -40,12 +42,13 @@ public class DialogueManager : MonoBehaviour
             return; 
         }
 
-       string nextSentence = sentences.Dequeue(); 
+       string nextSentence = sentences.Dequeue();
+        Debug.Log(nextSentence); 
     }
 
     public void EndDialogue()
     {
-
+        Debug.Log("Convo over"); 
     }
 
 }
