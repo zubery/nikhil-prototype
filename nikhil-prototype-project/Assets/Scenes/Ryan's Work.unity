@@ -1735,6 +1735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228435820}
   - component: {fileID: 1228435819}
+  - component: {fileID: 1228435821}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1774,6 +1775,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228435821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228435818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754eb524437a2446ea04e80aa42dab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memories: []
 --- !u!1 &1401741900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,12 +1936,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7d40b2249274412a09499dcbd367a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 2
   dialogue:
     interactableName: Green Fool
     sentences:
     - You fool...
     - You insolent coward...
     - Foolish of you to think...
+  memory: {fileID: 0}
 --- !u!114 &1468982903
 MonoBehaviour:
   m_ObjectHideFlags: 0
