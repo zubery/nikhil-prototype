@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: TesterProfile
+  m_Name: TesterProfile 1
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -121,12 +121,12 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0.91
-        temperature: 13.7
-        tint: 8.2
+        postExposure: 0.58
+        temperature: 4
+        tint: -1.5
         hueShift: -16
-        saturation: 1.129
-        contrast: 1.182
+        saturation: 1.085
+        contrast: 1.178
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -136,7 +136,7 @@ MonoBehaviour:
         mode: 1
         log:
           slope: {r: 0.9558659, g: 1, b: 0.8009094, a: 0}
-          power: {r: 1, g: 0.953882, b: 0.8629781, a: 0}
+          power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
@@ -157,8 +157,8 @@ MonoBehaviour:
               inWeight: 0
               outWeight: 0
             - serializedVersion: 3
-              time: 0.34888887
-              value: 0.2744186
+              time: 0.39777777
+              value: 0.2883721
               inSlope: 1
               outSlope: 1
               tangentMode: 0
@@ -166,28 +166,10 @@ MonoBehaviour:
               inWeight: 0
               outWeight: 0
             - serializedVersion: 3
-              time: 0.52
-              value: 0.5162791
-              inSlope: 1.7829171
-              outSlope: 1.7829171
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.64
-              value: 0.7302326
+              time: 0.61333334
+              value: 0.60465115
               inSlope: 1.2668833
               outSlope: 1.2668833
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.78444445
-              value: 0.96744186
-              inSlope: 0.62538
-              outSlope: 0.62538
               tangentMode: 0
               weightedMode: 0
               inWeight: 0
@@ -221,24 +203,6 @@ MonoBehaviour:
               inWeight: 0
               outWeight: 0
             - serializedVersion: 3
-              time: 0.19333333
-              value: 0.074418604
-              inSlope: 1.2276778
-              outSlope: 1.2276778
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.68
-              value: 0.7860465
-              inSlope: 1
-              outSlope: 1
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
               time: 1
               value: 1
               inSlope: 1
@@ -260,33 +224,6 @@ MonoBehaviour:
             - serializedVersion: 3
               time: 0
               value: 0
-              inSlope: 1
-              outSlope: 1
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.32666665
-              value: 0.2837209
-              inSlope: 0.9446713
-              outSlope: 0.9446713
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.74666667
-              value: 0.68837214
-              inSlope: 0.8221971
-              outSlope: 0.8221971
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.88
-              value: 0.7348837
               inSlope: 1
               outSlope: 1
               tangentMode: 0
@@ -378,8 +315,8 @@ MonoBehaviour:
           m_Range: 1
         e_CurrentEditingCurve: 0
         e_CurveY: 1
-        e_CurveR: 1
-        e_CurveG: 1
+        e_CurveR: 0
+        e_CurveG: 0
         e_CurveB: 0
   userLut:
     m_Enabled: 0
