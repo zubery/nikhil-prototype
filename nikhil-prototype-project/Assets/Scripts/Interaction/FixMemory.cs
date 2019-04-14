@@ -19,66 +19,48 @@ public class FixMemory : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
-        lambda = 30.0f; 
+        lambda = 15.0f;
+
+        StartCoroutine("GyroPuzzle"); 
     }
 
-    public void Update()
+    IEnumerator GyroPuzzle()
     {
-
-        //Debug.Log("In"); 
+        bool solved = false;
 
         if(gyro && !Input.gyro.enabled)
         {
             Input.gyro.enabled = true;
-            //Debug.Log("Gyro enabled");
         }
 
-        if(Input.gyro.enabled)
+        while(!solved)
         {
-            //Debug.Log("Rotating?");
-
-            for (int i = 0; i < Input.touchCount; i++)
-            {
-
-                touchRay = cam.ScreenPointToRay(Input.touches[i].position);
-
-                if (Physics.Raycast(touchRay, out hit))
-                {
-                    if (transform.name == "Ring 1")
-                    {
-
-                    }
-
-
-                    if (transform.name == "Ring 2")
-                    {
-
-                    }
-
-                    else if (transform.name == "Ring 3")
-                    {
-
-                    }
-
-                }
-
-            }
-
-
             ring1.Rotate(0.0f, Input.gyro.rotationRateUnbiased.x * 10.0f, 0.0f);
             ring2.Rotate(0.0f, Input.gyro.rotationRateUnbiased.y * 5.0f, 0.0f);
             ring3.Rotate(0.0f, Input.gyro.rotationRateUnbiased.z * 2.5f, 0.0f);
 
-            float temp = ring1.transform.eulerAngles.y; 
+            int angleEqual = AnglesEqual(ring1.transform.eulerAngles.y, 
+                ring2.transform.eulerAngles.y, 
+                ring3.transform.eulerAngles.y); 
 
-            if(AnglesEqual(ring1.transform.eulerAngles.y, ring2.transform.eulerAngles.y, ring3.transform.eulerAngles.y))
+            if(angleEqual != -1)
             {
-                Debug.Log("FIXED!!"); 
+                Debug.Log("FIXED!! " + angleEqual);
+
+
+
+                ring1.rotation = Quaternion.Euler(0.0f, angleEqual, 0.0f);
+                ring2.rotation = Quaternion.Euler(0.0f, angleEqual, 0.0f);
+                ring3.rotation = Quaternion.Euler(0.0f, angleEqual, 0.0f);
+
+                solved = true; 
             }
+
+            yield return null; 
         }
     }
 
-    public bool AnglesEqual(float angle1, float angle2, float angle3)
+    public int AnglesEqual(float angle1, float angle2, float angle3)
     {
         float deltaOneTwo;
         float deltaOneThree;
@@ -105,11 +87,11 @@ public class FixMemory : MonoBehaviour
 
         if(deltaOneTwo < lambda && deltaOneThree < lambda && deltaTwoThree < lambda)
         {
-            return true; 
+            return (int)((angle1 + angle2 + angle3) / 3.0f); 
         }
         else
         {
-            return false;
+            return -1;
         }
     }
 }
