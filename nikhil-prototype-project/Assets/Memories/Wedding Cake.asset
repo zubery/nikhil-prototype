@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e91e4e794b4d75b0aafdcb90962df, type: 3}
   m_Name: Wedding Cake
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  icon: {fileID: 0}
+  name: Crystal Cove Cake
+  description: 'Eliza''s favorite, from somewhere along the coast line. '
+  icon: {fileID: 21300384, guid: 5079b0d3016294f74b1a50c434b339cb, type: 3}

@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 599e91e4e794b4d75b0aafdcb90962df, type: 3}
-  m_Name: Painting
+  m_Name: The Cat
   m_EditorClassIdentifier: 
-  name: Southwestern Painting
-  description: A painting of a rock formation in the southwest... is that where we
-    are?
-  icon: {fileID: 21300342, guid: 5079b0d3016294f74b1a50c434b339cb, type: 3}
+  name: The Cursed Cat
+  description: 'A haunted artifact... you remember its unsettling stance. '
+  icon: {fileID: 21300000, guid: c94d63a3c95e1ca45ae6e25b43c4ccb9, type: 3}

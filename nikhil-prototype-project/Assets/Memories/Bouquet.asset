@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599e91e4e794b4d75b0aafdcb90962df, type: 3}
   m_Name: Bouquet
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  icon: {fileID: 0}
+  name: Bouquet of Sunflowers
+  description: Sunflowers that grow in the desert that Eliza loves... is that where
+    we are?
+  icon: {fileID: 21300072, guid: 5079b0d3016294f74b1a50c434b339cb, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Voicemail
   m_EditorClassIdentifier: 
   name: Voicemail from Sonia
-  description: 'Your sister said she''s stuck in traffic along CA-1. You swear you
-    can hear seagulls in the distance. '
-  icon: {fileID: 21300000, guid: c94d63a3c95e1ca45ae6e25b43c4ccb9, type: 3}
+  description: Your sister said she's stuck in traffic along the PCH. You heard seagulls
+    in the distance.
+  icon: {fileID: 21300402, guid: 5079b0d3016294f74b1a50c434b339cb, type: 3}
