@@ -11,6 +11,7 @@ public class DialogueInteractable : Interactable
 
     public override void Interact()
     {
+        Debug.Log("In Dialogue interact"); 
         base.Interact();
         DialogueManager.instance.StartDialogue(dialogue);
 

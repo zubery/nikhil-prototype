@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro; 
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI dialogueText;
+    public Animator animator; 
 
     private Queue<string> sentences;
 
@@ -24,14 +30,17 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log("Interaction");
+        //animator.SetBool("IsOpen", true);  
+
+        nameText.text = dialogue.interactableName; 
+
         sentences.Clear(); 
 
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence); 
         }
-
-        Debug.Log("Starting convo with: " + dialogue.interactableName);
 
         DisplayNextSentence(); 
     }
@@ -45,12 +54,25 @@ public class DialogueManager : MonoBehaviour
         }
 
         string nextSentence = sentences.Dequeue();
-        Debug.Log(nextSentence); 
+
+        StopAllCoroutines(); 
+        StartCoroutine(TypeSentence(nextSentence)); 
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = ""; 
+        foreach(char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null; 
+        }
     }
 
     public void EndDialogue()
     {
-        Debug.Log("Convo over"); 
+        Debug.Log("Convo over");
+        //animator.SetBool("IsOpen", false);
     }
 
 }
