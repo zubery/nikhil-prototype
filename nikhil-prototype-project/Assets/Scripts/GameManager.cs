@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public LayerMask playerLayer;
     public LayerMask interactableLayer;
+    public LayerMask UILayer; 
 
     private void Awake()
     {

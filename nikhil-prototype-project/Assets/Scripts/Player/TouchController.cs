@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic; 
 using UnityEngine;
+using UnityEngine.EventSystems; 
 
 [RequireComponent(typeof(PlayerMotor))]
 public class TouchController : MonoBehaviour
@@ -13,7 +14,7 @@ public class TouchController : MonoBehaviour
     private Ray touchRay;
     private RaycastHit hit; 
     private Vector3 distance3d;
-    private float distance;
+    private float distance; 
 
     private void Awake()
     {
@@ -26,15 +27,16 @@ public class TouchController : MonoBehaviour
         for(int i = 0; i < Input.touchCount; i++)
         {
 
-            touchRay = cam.ScreenPointToRay(Input.touches[i].position); 
+            touchRay = cam.ScreenPointToRay(Input.touches[i].position);
 
-            if(Physics.Raycast(touchRay, out hit))
+            if(Physics.Raycast(touchRay, out hit) && !EventSystem.current.IsPointerOverGameObject(i))
             {
                 motor.MoveToPoint(hit.point);
 
                 Interactable interactable = hit.collider.GetComponent<Interactable>(); 
                 if(interactable != null)
                 {
+                    Debug.Log("Found interactable"); 
                     SetFocus(interactable); 
                 }
                 else
