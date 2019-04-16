@@ -29,7 +29,7 @@ public class TouchController : MonoBehaviour
 
             touchRay = cam.ScreenPointToRay(Input.touches[i].position);
 
-            if(Physics.Raycast(touchRay, out hit) && !EventSystem.current.IsPointerOverGameObject(i))
+            if(Physics.Raycast(touchRay, out hit))
             {
                 motor.MoveToPoint(hit.point);
 

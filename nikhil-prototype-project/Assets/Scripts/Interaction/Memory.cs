@@ -8,4 +8,9 @@ public class Memory : ScriptableObject
     new public string name = "";
     public string description = ""; 
     public Sprite icon = null; 
+
+    public virtual void Remember()
+    {
+
+    }
 }
